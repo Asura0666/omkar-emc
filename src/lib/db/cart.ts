@@ -152,3 +152,23 @@ function mergeCartItems(...cartItems: CartItem[][]): CartItem[] {
     return acc;
   }, [] as CartItem[]);
 }
+
+export async function clearCart() {
+  const session = await getServerSession(authOptions);
+
+  if (session) {
+    // Clear cart for authenticated user
+    await prisma.cartItem.deleteMany({
+      where: { cart: { userId: session.user.id } },
+    });
+  } else {
+    // Clear cart for guest user using localCartId
+    const localCartId = cookies().get("localCartId")?.value;
+    if (localCartId) {
+      await prisma.cartItem.deleteMany({
+        where: { cartId: localCartId },
+      });
+    }
+  }
+}
+

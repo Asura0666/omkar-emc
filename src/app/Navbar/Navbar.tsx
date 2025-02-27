@@ -7,6 +7,7 @@ import { redirect } from "next/navigation";
 import { authOptions } from "../api/auth/[...nextauth]/route";
 import ShoppingCartButton from "./ShoppingCartButton";
 import UserMenuButton from "./UserMenuButton";
+import { Package } from "lucide-react";
 
 async function searchProducts(formData: FormData) {
   "use server";
@@ -41,6 +42,12 @@ export default async function Navbar() {
               />
             </div>
           </form>
+          {/* Orders Button (Visible only when logged in) */}
+          {session && (
+            <Link href="/orders" className="btn-ghost btn-circle btn">
+              <Package size={24} className="text-gray-700" />
+            </Link>
+          )}
           <ShoppingCartButton cart={cart} />
           <UserMenuButton session={session} />
         </div>
