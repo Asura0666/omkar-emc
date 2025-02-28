@@ -1,7 +1,7 @@
 import OrderConfirm from "./OrderConfirm";
 
 export const metadata = {
-  title: "Confirm Order - Flowmazon",
+  title: "Confirm Order - E mart",
 };
 
 export default function OrderConfirmPage() {

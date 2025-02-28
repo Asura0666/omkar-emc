@@ -1,5 +1,5 @@
 export const metadata = {
-  title: "Order Confirmation - Flowmazon",
+  title: "Order Confirmation - E mart",
 };
 
 export default function OrderConfirmationPage() {

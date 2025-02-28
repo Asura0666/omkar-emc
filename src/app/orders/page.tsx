@@ -2,7 +2,7 @@
 // import OrderItemSlider from "./OrderItemSlider";
 
 // export const metadata = {
-//   title: "Your Orders - Flowmazon",
+//   title: "Your Orders - E mart",
 // };
 
 // export default async function OrdersPage() {
@@ -70,7 +70,7 @@ import { getUserOrders } from "@/lib/db/order";
 import OrderItemDisplay from "./OrderItemSlider";
 
 export const metadata = {
-  title: "Your Orders - Flowmazon",
+  title: "Your Orders - E mart",
 };
 
 export default async function OrdersPage() {
