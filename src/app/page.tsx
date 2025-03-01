@@ -30,7 +30,7 @@ export default async function Home({
   return (
     <div className="flex flex-col items-center">
       {currentPage === 1 && (
-        <div className="hero rounded-xl bg-slate-900">
+        <div className="hero rounded-xl bg-base-100">
           <div className="hero-content flex-col lg:flex-row">
             <Image
               src={products[0].imageUrl}
