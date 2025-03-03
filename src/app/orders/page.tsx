@@ -120,8 +120,7 @@ export default async function OrdersPage() {
                   />
                 </div>
               </div>
-
-              <p className="mt-4 text-lg font-bold">Total: ${order.total}</p>
+              <p className="mt-4 text-lg font-bold">Total: ₹{order.total}</p>
             </div>
           ))}
         </div>
